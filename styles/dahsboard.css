@@ -1,0 +1,104 @@
+.button{
+    -fx-background-color:#6F5CC2;    
+    -fx-border-width:0px 0px 0px 10px ;
+    -fx-border-color: #ffffff;
+}
+.button:hover{
+   -fx-background-color:  #52438F;
+   -fx-border-width:0px 0px 0px 10px ;
+
+}
+.button:pressed{
+    -fx-background-color: #7156DD;
+}
+<<<<<<< HEAD:styles/dahsboard.css
+=======
+<<<<<<< HEAD
+.rootPane {
+    -fx-background-image: url("file:moving_image.gif");
+    -fx-background-size: cover;
+}
+
+.label {
+    -fx-text-fill: #FFFFFF;
+    -fx-font-size: 24px;
+    -fx-font-family: 'Arial Black';
+}
+
+.text-field,
+.password-field {
+    -fx-background-color: #FFFFFF;
+    -fx-background-radius: 5px;
+    -fx-border-radius: 5px;
+    -fx-border-color: #3A3A3A;
+    -fx-border-width: 1px;
+    -fx-text-fill: #3A3A3A;
+    -fx-font-family: 'Arial';
+}
+
+.text-field:focused,
+.password-field:focused {
+    -fx-background-color: #F0F0F0;
+    -fx-border-color: #008CBA;
+    -fx-border-width: 2px;
+}
+
+.text-field:hover,
+.password-field:hover {
+    -fx-border-color: #008CBA;
+}
+
+.button {
+    -fx-background-color: #008CBA;
+    -fx-background-radius: 5px;
+    -fx-border-radius: 5px;
+    -fx-border-color: #FFFFFF;
+    -fx-border-width: 1px;
+    -fx-text-fill: #FFFFFF;
+    -fx-font-family: 'Arial Black';
+    -fx-font-size: 18px;
+}
+
+.button:hover {
+    -fx-background-color: #F18A07;
+    -fx-border-color: #FFFFFF;
+}
+
+.text-area {
+    -fx-background-color: #FFFFFF;
+    -fx-background-radius: 5px;
+    -fx-border-radius: 5px;
+    -fx-border-color: #3A3A3A;
+    -fx-border-width: 1px;
+    -fx-text-fill: #3A3A3A;
+    -fx-font-family: 'Arial';
+}
+
+.text-area:focused {
+    -fx-background-color: #F0F0F0;
+    -fx-border-color: #008CBA;
+    -fx-border-width: 2px;
+}
+
+.text-area:hover {
+    -fx-border-color: #008CBA;
+}
+
+.error-label {
+    -fx-text-fill: #FF0000;
+    -fx-font-family: 'Arial';
+    -fx-font-size: 12px;
+}
+
+=======
+>>>>>>> master:src/styles/dahsboard.css
+
+.table-row-cell {
+    -fx-min-height: 25px;
+}
+<<<<<<< HEAD:styles/dahsboard.css
+
+
+=======
+>>>>>>> master
+>>>>>>> master:src/styles/dahsboard.css

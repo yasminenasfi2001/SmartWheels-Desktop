@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<VBox prefHeight="677.0" prefWidth="1110.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.FrontReservationController">
+   <children>
+      <AnchorPane fx:id="contentArea" prefHeight="100.0" prefWidth="1281.0">
+         <children>
+            <Pane fx:id="left" layoutX="-150.0" layoutY="-9.0" prefHeight="677.0" prefWidth="1475.0" style="-fx-background-color: #FFFFFF;" stylesheets="@../styles/style.css">
+               <children>
+                  <ScrollPane layoutX="176.0" layoutY="108.0" prefHeight="567.0" prefWidth="1299.0">
+                     <content>
+                        <GridPane fx:id="gridpane" prefHeight="1190.0" prefWidth="1265.0">
+                          <columnConstraints>
+                            <ColumnConstraints hgrow="SOMETIMES" maxWidth="572.0" minWidth="10.0" prefWidth="378.0" />
+                            <ColumnConstraints hgrow="SOMETIMES" maxWidth="885.0" minWidth="10.0" prefWidth="400.0" />
+                              <ColumnConstraints hgrow="SOMETIMES" maxWidth="885.0" minWidth="10.0" prefWidth="488.0" />
+                          </columnConstraints>
+                          <rowConstraints>
+                            <RowConstraints maxHeight="315.0" minHeight="10.0" prefHeight="270.0" vgrow="SOMETIMES" />
+                            <RowConstraints maxHeight="320.0" minHeight="10.0" prefHeight="290.0" vgrow="SOMETIMES" />
+                            <RowConstraints maxHeight="336.0" minHeight="10.0" prefHeight="320.0" vgrow="SOMETIMES" />
+                              <RowConstraints maxHeight="309.0" minHeight="10.0" prefHeight="309.0" vgrow="SOMETIMES" />
+                          </rowConstraints>
+                        </GridPane>
+                     </content>
+                  </ScrollPane>
+                  <HBox layoutX="176.0" layoutY="60.0" prefHeight="48.0" prefWidth="1275.0">
+                     <children>
+                        <Label prefHeight="48.0" prefWidth="153.0" text="SMART WHEELS">
+                           <graphic>
+                              <ImageView fitHeight="30.0" fitWidth="39.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../images/wheel-icon.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                           <font>
+                              <Font name="Arial Rounded MT Bold" size="14.0" />
+                           </font>
+                        </Label>
+                        <JFXButton fx:id="d" onAction="#btn_commentaire" prefHeight="48.0" prefWidth="285.0" styleClass="d" stylesheets="@../styles/style.css" text="Gestion des Commentaires" />
+                        <JFXButton fx:id="p" onAction="#btn_reclamation" prefHeight="48.0" prefWidth="231.0" styleClass="d" stylesheets="@../styles/style.css" text="Gestion des Réclamations" />
+                        <JFXButton onAction="#evenement" prefHeight="48.0" prefWidth="213.0" styleClass="d" stylesheets="@../styles/style.css" text="Gestion des Evenements" />
+                     </children>
+                  </HBox>
+                  <Label fx:id="lnom" layoutX="1132.0" layoutY="14.0" prefHeight="37.0" prefWidth="84.0" text="Nom">
+                     <font>
+                        <Font name="Bodoni MT Condensed" size="26.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="lprenom" layoutX="1261.0" layoutY="14.0" prefHeight="38.0" prefWidth="120.0" text="Prenom">
+                     <font>
+                        <Font name="Bodoni MT Condensed" size="26.0" />
+                     </font>
+                  </Label>
+                  <Button fx:id="back1" layoutX="176.0" layoutY="16.0" mnemonicParsing="false" onAction="#deconnexion" prefHeight="35.0" prefWidth="167.0" text="Deconnexion" textFill="#6b415e">
+                     <font>
+                        <Font size="16.0" />
+                     </font>
+                  </Button>
+               </children>
+            </Pane>
+            <Button fx:id="back" layoutX="1274.0" layoutY="5.0" mnemonicParsing="false" onAction="#back" prefHeight="22.0" prefWidth="33.0" textFill="#6b415e">
+               <font>
+                  <Font size="16.0" />
+               </font>
+               <graphic>
+                  <ImageView fx:id="admin" fitHeight="27.0" fitWidth="31.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/arrow-forward-icon.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+         </children>
+      </AnchorPane>
+   </children>
+</VBox>

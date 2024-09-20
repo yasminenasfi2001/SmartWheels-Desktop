@@ -1,0 +1,198 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="693.0" prefWidth="1168.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.ReparationController">
+    <children>
+        <Label fx:id="label" layoutX="126" layoutY="120" minHeight="16" minWidth="69" />
+      <Pane layoutX="14.0" layoutY="129.0" prefHeight="396.0" prefWidth="390.0" />
+      <TabPane fx:id="tab" layoutX="-5.0" layoutY="-3.0" prefHeight="630.0" prefWidth="1152.0" tabClosingPolicy="UNAVAILABLE">
+        <tabs>
+          <Tab text="Reparation">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="643.0" prefWidth="1161.0" style="-fx-background-color: #EAE7FA;">
+                     <children>
+                        <TableView fx:id="affichage" layoutX="482.0" layoutY="169.0" prefHeight="324.0" prefWidth="612.0">
+                          <columns>
+                            <TableColumn fx:id="id" prefWidth="75.0" text="Identifiant" />
+                              <TableColumn fx:id="s_description" prefWidth="88.79998779296875" text="Description " />
+                              <TableColumn fx:id="s_etat" prefWidth="63.20001220703125" text="Etat" />
+                              <TableColumn fx:id="s_datereparation" prefWidth="75.0" text="Date reparation" />
+                              <TableColumn fx:id="s_datemanutention" prefWidth="84.0" text="Date manutention" />
+                              <TableColumn fx:id="s_datedefecation" prefWidth="106.4000244140625" text="Date defecation" />
+                              <TableColumn fx:id="t_idveh" prefWidth="106.4000244140625" text="id_veh" />
+                          </columns>
+                        </TableView>
+                        <Label layoutX="37.0" layoutY="268.0" text="Identifiant:" visible="false" />
+                        <TextField fx:id="description" layoutX="265.0" layoutY="295.0" prefHeight="39.0" prefWidth="188.0" promptText="Description" />
+                        <TextField fx:id="etat" layoutX="265.0" layoutY="257.0" prefHeight="39.0" prefWidth="189.0" promptText="Etat" />
+                        <DatePicker fx:id="date_reparation" layoutX="265.0" layoutY="334.0" prefHeight="39.0" prefWidth="190.0" promptText="Date reparation" />
+                        <DatePicker fx:id="date_defecation" layoutX="265.0" layoutY="413.0" prefHeight="39.0" prefWidth="189.0" promptText="Date defecation" />
+                        <DatePicker fx:id="date_manutention" layoutX="265.0" layoutY="374.0" prefHeight="39.0" prefWidth="190.0" promptText="Date manutention" />
+                        <TextField fx:id="id_veh" layoutX="264.0" layoutY="218.0" prefHeight="39.0" prefWidth="191.0" promptText="id vehicule" />
+                        <AnchorPane fx:id="anchor1" layoutX="-5.0" layoutY="2.0" prefHeight="72.0" prefWidth="1158.0" style="-fx-background-color: #52438F;">
+                           <children>
+                              <TextField layoutX="474.0" layoutY="20.0" prefHeight="25.0" prefWidth="234.0" />
+                              <Label layoutX="368.0" layoutY="18.0" prefHeight="30.0" prefWidth="72.0" text="Search" textFill="#e1dddd">
+                                 <font>
+                                    <Font size="20.0" />
+                                 </font>
+                              </Label>
+                              <Label fx:id="l_prenom" layoutX="1047.0" layoutY="36.0" text="Prenom" textFill="WHITE">
+                                 <font>
+                                    <Font size="19.0" />
+                                 </font>
+                              </Label>
+                              <Label fx:id="l_nom" layoutX="1059.0" layoutY="6.0" text="Nom" textFill="WHITE">
+                                 <font>
+                                    <Font size="19.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                        </AnchorPane>
+                        <TextField fx:id="identifiant" layoutX="267.0" layoutY="93.0" prefHeight="25.0" prefWidth="155.0" promptText="id vehicule" />
+                        <Button layoutX="538.0" layoutY="534.0" mnemonicParsing="false" onAction="#ajouter" prefHeight="23.0" prefWidth="160.0" style="-fx-background-color: #6F5CC2;" text="AJouter" textFill="WHITE" />
+                        <Button layoutX="718.0" layoutY="534.0" mnemonicParsing="false" onAction="#modifier" prefHeight="23.0" prefWidth="160.0" style="-fx-background-color: #6F5CC2;" text="Modifier" textFill="WHITE" />
+                        <Button layoutX="899.0" layoutY="534.0" mnemonicParsing="false" onAction="#Supprimer" prefHeight="23.0" prefWidth="160.0" style="-fx-background-color: #6F5CC2;" text="Supprimer" textFill="WHITE" />
+                     </children>
+                  </AnchorPane>
+            </content>
+          </Tab>
+        </tabs>
+      </TabPane>
+      <Label layoutX="45.0" layoutY="321.0" />
+      <AnchorPane fx:id="anchor" layoutX="-5.0" layoutY="100.0" prefHeight="594.0" prefWidth="234.0" style="-fx-background-color: #6F5CC2;">
+         <children>
+            <Pane fx:id="left" layoutX="-12.0" layoutY="87.0" prefHeight="506.0" prefWidth="248.0" stylesheets="@../styles/dahsboard.css">
+               <children>
+                  <VBox fx:id="vboxid" layoutX="14.0" layoutY="-87.0" prefHeight="335.0" prefWidth="234.0">
+                     <children>
+                        <Button alignment="BASELINE_LEFT" mnemonicParsing="false" prefHeight="39.0" prefWidth="222.0" text="Front" textFill="WHITE">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                           <graphic>
+                              <ImageView fitHeight="27.0" fitWidth="21.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../images/lastversion/front.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                        </Button>
+                        <Button alignment="BASELINE_LEFT" mnemonicParsing="false" onAction="#Utilisateur" prefHeight="39.0" prefWidth="215.0" text="Gestion Utilisateur" textFill="WHITE">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                           <graphic>
+                              <ImageView fitHeight="24.0" fitWidth="23.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../images/lastversion/user.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                        </Button>
+                        <Button alignment="BASELINE_LEFT" mnemonicParsing="false" onAction="#Reservation" prefHeight="39.0" prefWidth="215.0" text="Gestion Rservation" textFill="WHITE">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                           <graphic>
+                              <ImageView fitHeight="30.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../images/lastversion/reservation.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                        </Button>
+                        <Button alignment="BASELINE_LEFT" mnemonicParsing="false" onAction="#Produits" prefHeight="39.0" prefWidth="222.0" text="Gestion Produits" textFill="WHITE">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                           <graphic>
+                              <ImageView fitHeight="27.0" fitWidth="21.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../images/lastversion/produit.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                        </Button>
+                        <Button alignment="BASELINE_LEFT" mnemonicParsing="false" onAction="#Vehicule" prefHeight="39.0" prefWidth="215.0" text="Gestion Vehicule" textFill="WHITE">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                           <graphic>
+                              <ImageView fitHeight="25.0" fitWidth="21.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../images/lastversion/vehicule.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                        </Button>
+                        <Button fx:id="Evenement" alignment="BASELINE_LEFT" mnemonicParsing="false" onAction="#Evenement" prefHeight="39.0" prefWidth="222.0" text="Gestion Evenement" textFill="WHITE">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                           <graphic>
+                              <ImageView fitHeight="24.0" fitWidth="28.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../images/lastversion/evenement.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                        </Button>
+                        <Button alignment="BASELINE_LEFT" mnemonicParsing="false" onAction="#Reparation" prefHeight="39.0" prefWidth="215.0" text="Gestion Reparation" textFill="WHITE">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                           <graphic>
+                              <ImageView fitHeight="31.0" fitWidth="23.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../images/lastversion/reparation.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                        </Button>
+                        <Button fx:id="id_rec" alignment="BASELINE_LEFT" mnemonicParsing="false" onAction="#Reclamation" prefHeight="39.0" prefWidth="228.0" text="Gestion Reclamation" textFill="WHITE">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                           <graphic>
+                              <ImageView fitHeight="23.0" fitWidth="23.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../images/lastversion/reclamation.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                        </Button>
+                        <Button alignment="BASELINE_LEFT" mnemonicParsing="false" onAction="#dexonnexion" prefHeight="39.0" prefWidth="222.0" text="Deconnexion" textFill="WHITE">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                           <graphic>
+                              <ImageView fitHeight="27.0" fitWidth="21.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../images/lastversion/deconnexion.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                        </Button>
+                     </children>
+                  </VBox>
+               </children>
+            </Pane>
+         </children>
+      </AnchorPane>
+    </children>
+</AnchorPane>

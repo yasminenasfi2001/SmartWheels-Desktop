@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<<<<<<< HEAD
+<AnchorPane id="AnchorPane" prefHeight="690.0" prefWidth="983.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.FrontController">
+=======
+<AnchorPane id="AnchorPane" prefHeight="690.0" prefWidth="983.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="projet_transport.controler.FrontController">
+>>>>>>> master
+   <children>
+      <AnchorPane fx:id="anchor1" layoutX="2.0" prefHeight="100.0" prefWidth="1281.0" style="-fx-background-color: #52438F;">
+         <children>
+            <Button fx:id="Front" layoutX="33.0" layoutY="31.0" mnemonicParsing="false" onAction="#Go_to_Back" prefHeight="39.0" prefWidth="127.0" style="-fx-background-color: #6F5CC2;" text="Back" textFill="WHITE" />
+            <Button fx:id="Front1" layoutX="176.0" layoutY="31.0" mnemonicParsing="false" onAction="#Go_to_Login" prefHeight="39.0" prefWidth="127.0" style="-fx-background-color: #6F5CC2;" text="Déconnexion" textFill="WHITE" />
+            <Label fx:id="l_prenom" layoutX="1151.0" layoutY="34.0" text="Prenom" textFill="WHITE">
+               <font>
+                  <Font size="19.0" />
+               </font>
+            </Label>
+            <Label fx:id="l_nom" layoutX="1077.0" layoutY="34.0" text="Nom" textFill="WHITE">
+               <font>
+                  <Font size="19.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

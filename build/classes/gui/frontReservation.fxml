@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.effect.ColorAdjust?>
+<?import javafx.scene.effect.Light.Distant?>
+<?import javafx.scene.effect.Lighting?>
+<?import javafx.scene.effect.Shadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<VBox prefHeight="677.0" prefWidth="1110.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.FrontReservationController">
+   <children>
+      <AnchorPane fx:id="contentArea" prefHeight="100.0" prefWidth="1281.0" style="-fx-background-color: #52438F;">
+         <children>
+            <Pane fx:id="left" layoutY="48.0" prefHeight="596.0" prefWidth="1331.0" style="-fx-background-color: #FFFFFF;" stylesheets="@../styles/dahsboard.css">
+               <children>
+                  <Pane layoutX="14.0" layoutY="123.0" prefHeight="469.0" prefWidth="270.0" style="-fx-background-color: #52438F;">
+                     <children>
+                        <Button alignment="BASELINE_LEFT" layoutX="71.0" layoutY="416.0" mnemonicParsing="false" onAction="#ajouter" prefHeight="39.0" prefWidth="120.0" text="Réserver" textFill="WHITE">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Button>
+                        <ImageView fitHeight="214.0" fitWidth="236.0" layoutX="24.0" layoutY="7.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../images/t1.PNG" />
+                           </image>
+                        </ImageView>
+                        <Label fx:id="marquelabel1" layoutX="24.0" layoutY="235.0" prefHeight="37.0" prefWidth="181.0" textFill="WHITE">
+                           <font>
+                              <Font name="Arial Rounded MT Bold" size="18.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="couleurlabel1" layoutX="24.0" layoutY="271.0" prefHeight="37.0" prefWidth="181.0" textFill="WHITE">
+                           <font>
+                              <Font name="Arial Rounded MT Bold" size="18.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="vitesselabel1" layoutX="24.0" layoutY="308.0" prefHeight="37.0" prefWidth="181.0" textFill="WHITE">
+                           <font>
+                              <Font name="Arial Rounded MT Bold" size="18.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="id_vehicule" layoutX="41.0" layoutY="359.0" prefHeight="37.0" prefWidth="181.0" textFill="WHITE">
+                           <font>
+                              <Font name="Arial Rounded MT Bold" size="18.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </Pane>
+                  <Pane layoutX="325.0" layoutY="125.0" prefHeight="469.0" prefWidth="276.0" style="-fx-background-color: #52438F;">
+                     <children>
+                        <Button alignment="BASELINE_LEFT" layoutX="78.0" layoutY="416.0" mnemonicParsing="false" onAction="#ajouter" prefHeight="39.0" prefWidth="120.0" text="Réserver" textFill="WHITE">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Button>
+                        <ImageView fitHeight="214.0" fitWidth="236.0" layoutX="33.0" layoutY="5.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../images/t3.PNG" />
+                           </image>
+                        </ImageView>
+                        <GridPane layoutX="-100.0" layoutY="279.0">
+                          <rowConstraints>
+                            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                          </rowConstraints>
+                        </GridPane>
+                        <Label fx:id="marquelabel2" layoutX="33.0" layoutY="235.0" prefHeight="37.0" prefWidth="181.0" textFill="WHITE">
+                           <font>
+                              <Font name="Arial Rounded MT Bold" size="18.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="couleurlabel2" layoutX="33.0" layoutY="272.0" prefHeight="37.0" prefWidth="181.0" textFill="WHITE">
+                           <font>
+                              <Font name="Arial Rounded MT Bold" size="18.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="vitesselabel2" layoutX="33.0" layoutY="306.0" prefHeight="37.0" prefWidth="181.0" textFill="WHITE">
+                           <font>
+                              <Font name="Arial Rounded MT Bold" size="18.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="id_vehicule1" layoutX="48.0" layoutY="369.0" prefHeight="37.0" prefWidth="181.0" textFill="WHITE">
+                           <font>
+                              <Font name="Arial Rounded MT Bold" size="18.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </Pane>
+                  <Pane layoutX="636.0" layoutY="128.0" prefHeight="469.0" prefWidth="289.0" style="-fx-background-color: #52438F;">
+                     <children>
+                        <Button alignment="BASELINE_LEFT" layoutX="71.0" layoutY="416.0" mnemonicParsing="false" onAction="#ajouter" prefHeight="39.0" prefWidth="120.0" text="Réserver" textFill="WHITE">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Button>
+                        <ImageView fitHeight="214.0" fitWidth="224.0" layoutX="39.0" layoutY="4.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../images/t4.PNG" />
+                           </image>
+                        </ImageView>
+                        <Label fx:id="marquelabel3" layoutX="41.0" layoutY="235.0" prefHeight="37.0" prefWidth="181.0" textFill="WHITE">
+                           <font>
+                              <Font name="Arial Rounded MT Bold" size="18.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="couleurlabel3" layoutX="41.0" layoutY="272.0" prefHeight="37.0" prefWidth="181.0" textFill="WHITE">
+                           <font>
+                              <Font name="Arial Rounded MT Bold" size="18.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="vitesselabel3" layoutX="41.0" layoutY="309.0" prefHeight="37.0" prefWidth="181.0" textFill="WHITE">
+                           <font>
+                              <Font name="Arial Rounded MT Bold" size="18.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="id_vehicule2" layoutX="41.0" layoutY="367.0" prefHeight="37.0" prefWidth="181.0" textFill="WHITE">
+                           <font>
+                              <Font name="Arial Rounded MT Bold" size="18.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </Pane>
+                  <ImageView fitHeight="117.0" fitWidth="963.0" layoutX="202.0" layoutY="1.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/Capture.PNG" />
+                     </image>
+                     <effect>
+                        <ColorAdjust>
+                           <input>
+                              <Lighting>
+                                 <bumpInput>
+                                    <Shadow />
+                                 </bumpInput>
+                                 <light>
+                                    <Light.Distant />
+                                 </light>
+                              </Lighting>
+                           </input>
+                        </ColorAdjust>
+                     </effect>
+                  </ImageView>
+               </children>
+            </Pane>
+            <Button fx:id="back" layoutX="1274.0" layoutY="5.0" mnemonicParsing="false" onAction="#back" prefHeight="22.0" prefWidth="33.0" textFill="#6b415e">
+               <font>
+                  <Font size="16.0" />
+               </font>
+               <graphic>
+                  <ImageView fitHeight="27.0" fitWidth="31.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/arrow-forward-icon.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+         </children>
+      </AnchorPane>
+   </children>
+</VBox>

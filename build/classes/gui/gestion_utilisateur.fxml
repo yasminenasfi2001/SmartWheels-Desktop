@@ -1,0 +1,246 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.chart.BarChart?>
+<?import javafx.scene.chart.CategoryAxis?>
+<?import javafx.scene.chart.NumberAxis?>
+<?import javafx.scene.chart.PieChart?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.effect.Glow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" fx:id="aze" prefHeight="544.0" prefWidth="1117.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.Gestion_UtilisateurController">
+   <children>
+      <AnchorPane fx:id="anchor" prefHeight="594.0" prefWidth="211.0" style="-fx-background-color: #6F5CC2;">
+         <children>
+            <Pane fx:id="left" layoutX="-12.0" layoutY="129.0" prefHeight="446.0" prefWidth="234.0" stylesheets="@../styles/dahsboard.css">
+               <children>
+                  <Button alignment="BASELINE_LEFT" layoutX="14.0" layoutY="-57.0" mnemonicParsing="false" onAction="#home" prefHeight="39.0" prefWidth="183.0" text="    Home" textFill="WHITE">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Button>
+                  <Button alignment="BASELINE_LEFT" layoutX="14.0" layoutY="4.0" mnemonicParsing="false" prefHeight="39.0" prefWidth="195.0" text="   Gestion Utilisateur" textFill="WHITE">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Button>
+                  <Button alignment="BASELINE_LEFT" layoutX="14.0" layoutY="72.0" mnemonicParsing="false" onAction="#Reservation" prefHeight="39.0" prefWidth="202.0" text="   Gestion Rservation" textFill="WHITE">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Button>
+                  <Button alignment="BASELINE_LEFT" layoutX="14.0" layoutY="210.0" mnemonicParsing="false" prefHeight="39.0" prefWidth="183.0" text="   Gestion Produits" textFill="WHITE">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Button>
+                  <Button alignment="BASELINE_LEFT" layoutX="14.0" layoutY="140.0" mnemonicParsing="false" onAction="#Vehicule" prefHeight="39.0" prefWidth="195.0" text="    Gestion Vehicule" textFill="WHITE">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Button>
+                  <Button alignment="BASELINE_LEFT" layoutX="14.0" layoutY="335.0" mnemonicParsing="false" prefHeight="39.0" prefWidth="204.0" text="   Gestion Evenement" textFill="WHITE">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Button>
+                  <Button alignment="BASELINE_LEFT" layoutX="14.0" layoutY="276.0" mnemonicParsing="false" prefHeight="39.0" prefWidth="202.0" text="  Gestion Reparation" textFill="WHITE">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Button>
+                  <ImageView fitHeight="39.0" fitWidth="32.0" layoutX="23.0" layoutY="-53.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/gestion_client/home.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fitHeight="32.0" fitWidth="25.0" layoutX="27.0" layoutY="10.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/gestion_client/user.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fitHeight="32.0" fitWidth="25.0" layoutX="27.0" layoutY="79.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/gestion_client/agenda.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fitHeight="32.0" fitWidth="25.0" layoutX="27.0" layoutY="147.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/gestion_client/motorcycle-icon.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fitHeight="32.0" fitWidth="25.0" layoutX="26.0" layoutY="216.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/gestion_client/shop-icon.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fitHeight="25.0" fitWidth="25.0" layoutX="22.0" layoutY="283.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/gestion_client/Action-configure-icon.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fitHeight="25.0" fitWidth="25.0" layoutX="25.0" layoutY="344.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/gestion_client/Actions-view-calendar-upcoming-days-icon.png" />
+                     </image>
+                  </ImageView>
+                  <Button alignment="BASELINE_LEFT" layoutX="14.0" layoutY="395.0" mnemonicParsing="false" onAction="#Reclamation" prefHeight="39.0" prefWidth="225.0" text="   Gestion Reclamation" textFill="WHITE">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Button>
+                  <ImageView fitHeight="25.0" fitWidth="25.0" layoutX="25.0" layoutY="404.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/gestion_client/Actions-view-calendar-upcoming-days-icon.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </Pane>
+         </children>
+      </AnchorPane>
+      <TabPane fx:id="tabpane" layoutX="211.0" layoutY="69.0" prefHeight="525.0" prefWidth="901.0" tabClosingPolicy="UNAVAILABLE">
+        <tabs>
+          <Tab text="Utilisateur                  ">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="497.0" prefWidth="953.0">
+                     <children>
+                        <TableView fx:id="affichage" layoutX="248.0" layoutY="11.0" prefHeight="368.0" prefWidth="664.0">
+                          <columns>
+                            <TableColumn fx:id="id" prefWidth="43.0" text="id" />
+                            <TableColumn fx:id="nom" prefWidth="65.0" text="nom" />
+                              <TableColumn fx:id="prenom" prefWidth="93.0" text="prenom" />
+                              <TableColumn fx:id="genre" prefWidth="78.0" text="genre" />
+                              <TableColumn fx:id="email" prefWidth="125.0" text="email" />
+                              <TableColumn fx:id="date_naissance" minWidth="0.0" prefWidth="99.0" text="date_naissance" />
+                              <TableColumn fx:id="mot_passe" minWidth="0.0" prefWidth="84.0" text="mot_passe" />
+                              <TableColumn fx:id="typee" minWidth="0.0" prefWidth="81.0" text="type" />
+                              <TableColumn fx:id="telephone" minWidth="0.0" prefWidth="85.0" text="telephone" />
+                              <TableColumn fx:id="region" prefWidth="69.0" text="region" />
+                          </columns>
+                        </TableView>
+                        <Button fx:id="supprimer" layoutX="691.0" layoutY="423.0" mnemonicParsing="false" onMouseClicked="#Supprimer" prefHeight="27.0" prefWidth="164.0" style="-fx-background-color: #6F5CC2;" text="Supprimer" textFill="WHITE" />
+                        <Pane fx:id="layout22" layoutX="7.0" layoutY="15.0" prefHeight="435.0" prefWidth="241.0">
+                           <children>
+                              <TextField fx:id="u_nom" layoutX="5.0" layoutY="35.0" prefHeight="41.0" prefWidth="230.0" promptText="Nom" />
+                              <TextField fx:id="u_prenom" layoutX="5.0" layoutY="76.0" prefHeight="41.0" prefWidth="230.0" promptText="Prenom" />
+                              <TextField fx:id="u_email" layoutX="5.0" layoutY="117.0" prefHeight="41.0" prefWidth="230.0" promptText="Email" />
+                              <DatePicker fx:id="u_date" layoutX="5.0" layoutY="159.0" prefHeight="41.0" prefWidth="230.0" promptText="Date_naissance" />
+                              <TextField fx:id="u_region" layoutX="5.0" layoutY="242.0" prefHeight="41.0" prefWidth="230.0" promptText="Region" />
+                              <TextField fx:id="u_passe" layoutX="5.0" layoutY="283.0" prefHeight="41.0" prefWidth="230.0" promptText="Mot passe" />
+                              <ComboBox fx:id="u_type" layoutX="6.0" layoutY="324.0" prefHeight="41.0" prefWidth="230.0" promptText="Type" />
+                              <TextField fx:id="u_telephone" layoutX="5.0" layoutY="201.0" prefHeight="41.0" prefWidth="230.0" promptText="Telephone" />
+                              <TextField fx:id="u_choix" editable="false" layoutX="4.0" layoutY="-4.0" prefHeight="41.0" prefWidth="230.0" promptText="ID" />
+                              <HBox layoutX="28.0" layoutY="378.0" prefHeight="39.0" prefWidth="192.0">
+                                 <children>
+                                    <RadioButton fx:id="u_h" mnemonicParsing="false" prefHeight="15.0" prefWidth="69.0" selected="true" text="Homme">
+                                       <toggleGroup>
+                                          <ToggleGroup fx:id="genre2" />
+                                       </toggleGroup>
+                                    </RadioButton>
+                                    <RadioButton fx:id="u_f" mnemonicParsing="false" text="Femme" toggleGroup="$genre2" />
+                                    <RadioButton fx:id="u_a" mnemonicParsing="false" text="Autre" toggleGroup="$genre2" />
+                                 </children>
+                              </HBox>
+                           </children>
+                           <effect>
+                              <Glow />
+                           </effect>
+                        </Pane>
+                        <Button fx:id="ajouter" layoutX="316.0" layoutY="424.0" mnemonicParsing="false" onMouseClicked="#ajouter" prefHeight="23.0" prefWidth="160.0" style="-fx-background-color: #6F5CC2;" text="AJouter" textFill="WHITE" />
+                        <Button fx:id="modifier" layoutX="502.0" layoutY="423.0" mnemonicParsing="false" onMouseClicked="#update" prefHeight="27.0" prefWidth="164.0" style="-fx-background-color: #6F5CC2;" text="Modifier" textFill="WHITE" />
+                        <Button fx:id="annuler" layoutX="691.0" layoutY="423.0" mnemonicParsing="false" onAction="#annuler" prefHeight="27.0" prefWidth="164.0" style="-fx-background-color: #6F5CC2;" text="Annuler" textFill="WHITE" visible="false" />
+                     </children>
+                  </AnchorPane>
+            </content>
+          </Tab>
+            <Tab text="Carte_fidelite                 ">
+              <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="497.0" prefWidth="883.0">
+                     <children>
+                        <TableView fx:id="t_affichage" layoutX="209.0" layoutY="118.0" prefHeight="275.0" prefWidth="394.0">
+                          <columns>
+                            <TableColumn fx:id="t_id" prefWidth="206.0" text="id" />
+                            <TableColumn fx:id="t_points" prefWidth="208.0" text="points" />
+                          </columns>
+                        </TableView>
+                        <Pane fx:id="layout221" layoutX="238.0" layoutY="14.0" prefHeight="115.0" prefWidth="304.0">
+                           <children>
+                              <TextField fx:id="c_points" layoutX="47.0" layoutY="53.0" prefHeight="41.0" prefWidth="224.0" promptText="Points" />
+                              <ComboBox fx:id="c_idd" layoutX="47.0" layoutY="20.0" prefHeight="33.0" prefWidth="225.0" promptText="Choisir id" />
+                           </children>
+                           <effect>
+                              <Glow />
+                           </effect>
+                        </Pane>
+                        <Button fx:id="ajouter12" layoutX="485.0" layoutY="413.0" mnemonicParsing="false" onAction="#supprimer_carte" prefHeight="25.0" prefWidth="123.0" style="-fx-background-color: #6F5CC2;" text="Suprrimer" textFill="WHITE" />
+                        <Button fx:id="ajouter11" layoutX="347.0" layoutY="413.0" mnemonicParsing="false" onAction="#modifier_carte" prefHeight="25.0" prefWidth="119.0" style="-fx-background-color: #6F5CC2;" text="Modifier" textFill="WHITE" />
+                        <Button fx:id="ajouter1" layoutX="210.0" layoutY="413.0" mnemonicParsing="false" onAction="#ajouter_carte" prefHeight="25.0" prefWidth="127.0" style="-fx-background-color: #6F5CC2;" text="AJouter" textFill="WHITE" />
+                     </children>
+                  </AnchorPane>
+              </content>
+            </Tab>
+            <Tab onSelectionChanged="#stat" text="Statistiques                ">
+              <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <PieChart fx:id="piechart" layoutX="31.0" layoutY="86.0" prefHeight="348.0" prefWidth="389.0" />
+                        <BarChart fx:id="barchart" layoutX="469.0" layoutY="92.0" prefHeight="331.0" prefWidth="387.0">
+                          <xAxis>
+                            <CategoryAxis side="BOTTOM" />
+                          </xAxis>
+                          <yAxis>
+                            <NumberAxis side="LEFT" />
+                          </yAxis>
+                        </BarChart>
+                     </children>
+                  </AnchorPane>
+              </content>
+            </Tab>
+        </tabs>
+      </TabPane>
+      <AnchorPane fx:id="anchor1" layoutX="-6.0" prefHeight="72.0" prefWidth="1123.0" style="-fx-background-color: #52438F;">
+         <children>
+            <Button alignment="BASELINE_LEFT" layoutX="36.0" layoutY="16.0" mnemonicParsing="false" onAction="#Go_to_front" prefHeight="39.0" prefWidth="135.0" style="-fx-background-color: transparent; -fx-border-image-width: 5px; -fx-border-color: white;" text=" Go to Front" textFill="WHITE">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Button>
+            <TextField layoutX="474.0" layoutY="20.0" prefHeight="25.0" prefWidth="234.0" />
+            <Label layoutX="368.0" layoutY="18.0" prefHeight="30.0" prefWidth="72.0" text="Search" textFill="#e1dddd">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Label>
+            <Label fx:id="l_prenom" layoutX="827.0" layoutY="36.0" text="Prenom" textFill="WHITE">
+               <font>
+                  <Font size="19.0" />
+               </font>
+            </Label>
+            <Label fx:id="l_nom" layoutX="839.0" layoutY="6.0" text="Nom" textFill="WHITE">
+               <font>
+                  <Font size="19.0" />
+               </font>
+            </Label>
+            <Button alignment="BASELINE_LEFT" layoutX="965.0" layoutY="16.0" mnemonicParsing="false" onAction="#Deconnexion" prefHeight="41.0" prefWidth="135.0" style="-fx-background-color: transparent; -fx-border-image-width: 5px; -fx-border-color: white;" text="Déconnexion " textFill="WHITE">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Button>
+         </children></AnchorPane>
+   </children>
+</AnchorPane>

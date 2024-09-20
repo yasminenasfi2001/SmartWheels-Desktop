@@ -1,0 +1,30 @@
+.button {
+    -fx-background-color:  #95b0b7;
+    -fx-text-fill: #FFFFFF;
+    -fx-font-size: 14px;
+    -fx-font-weight: bold;
+    -fx-padding: 8px 16px;
+    -fx-background-radius: 0;
+    -fx-border-radius: 0;
+}
+
+.button:hover {
+    -fx-background-color: #FFFFFF;
+    -fx-text-fill: #336699;
+    -fx-border-width: 2px;
+    -fx-border-color: #336699;
+}
+.list-cell {
+    -fx-background-color: transparent;
+    -fx-font-size: 14px;
+}
+
+.list-view:focused .list-cell:focused {
+    -fx-background-color: #336699;
+    -fx-text-fill: #FFFFFF;
+}
+
+.list-view:focused .list-cell:filled:focused:hover {
+    -fx-background-color: #FFFFFF;
+    -fx-text-fill: #336699;
+}

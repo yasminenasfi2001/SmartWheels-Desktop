@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane id="AnchorPane" prefHeight="735.0" prefWidth="1131.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.DetailsController">
+   <children>
+      <TableView fx:id="TABSP" layoutX="84.0" layoutY="256.0" prefHeight="269.0" prefWidth="683.0">
+        <columns>
+          <TableColumn fx:id="NSP" prefWidth="165.0" text="Nom  sponsor" />
+          <TableColumn fx:id="TELSP" prefWidth="232.0" text="Tel sponsor" />
+            <TableColumn fx:id="EMAILSP" prefWidth="285.0" text="Email sponsor" />
+        </columns>
+      </TableView>
+      <Label fx:id="NBVUES" layoutX="81.0" layoutY="202.0" prefHeight="43.0" prefWidth="138.0" text="Label">
+         <font>
+            <Font name="Bell MT" size="27.0" />
+         </font></Label>
+      <ImageView fx:id="vueimage" fitHeight="31.0" fitWidth="53.0" layoutX="110.0" layoutY="208.0" pickOnBounds="true" preserveRatio="true" />
+      <Label fx:id="LABELID" layoutX="29.0" layoutY="663.0" prefHeight="43.0" prefWidth="74.0" textFill="WHITE" />
+      <Label fx:id="DUREE" layoutX="733.0" layoutY="177.0" prefHeight="68.0" prefWidth="361.0" text="Label">
+         <font>
+            <Font name="Bookman Old Style" size="21.0" />
+         </font></Label>
+      <Button fx:id="retourID" layoutX="1037.0" layoutY="669.0" mnemonicParsing="false" onAction="#retourclient" text="Retour" />
+      <Label fx:id="labeldatedeb" layoutX="193.0" layoutY="669.0" prefHeight="31.0" prefWidth="165.0" text="Label" textFill="WHITE" />
+      <Label fx:id="labeldatefin" layoutX="130.0" layoutY="663.0" prefHeight="31.0" prefWidth="201.0" text="Label" textFill="WHITE" />
+      <TableView disable="true" layoutX="779.0" layoutY="256.0" prefHeight="269.0" prefWidth="303.0">
+        <columns>
+          <TableColumn fx:id="np" prefWidth="131.0" text="Nom participant" />
+          <TableColumn fx:id="pp" prefWidth="171.0" text="Prenom participant" visible="false" />
+        </columns>
+      </TableView>
+      <Text layoutX="358.0" layoutY="91.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Détails événement" wrappingWidth="497.9999953061342">
+         <font>
+            <Font size="51.0" />
+         </font>
+      </Text>
+   </children>
+</AnchorPane>

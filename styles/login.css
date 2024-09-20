@@ -1,0 +1,35 @@
+          
+.button{
+    
+    -fx-hgap: 20px;
+    -fx-padding: 10px;
+
+    -fx-background-color: #f88932;
+    -fx-background-radius: 50px;
+
+    -fx-border-radius: 50px;
+    -fx-border-width: 5px;
+    
+  -fx-font-size:20;
+  -fx-text-fill:#ffffff;
+    
+}
+.button:hover{
+    -fx-hgap: 20px;
+    -fx-padding: 10px;
+
+    -fx-background-color: #f88932;
+    -fx-background-radius: 50px;
+
+    -fx-border-radius: 50px;
+    -fx-border-width: 5px;
+    
+  -fx-font-size:21;
+  -fx-text-fill:#ffffff;
+    -fx-underline: true;
+	-fx-font-weigth:bold;
+}
+#mop:hover{
+  -fx-underline: true;
+   
+}

@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane id="AnchorPane" prefHeight="755.0" prefWidth="1275.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.EvenementController">
+   <children>
+      <TableView fx:id="tableev1" layoutX="113.0" layoutY="178.0" opacity="0.62" prefHeight="382.0" prefWidth="1050.0" style="-fx-background-color: #AF7AC5;">
+         <columns>
+            <TableColumn fx:id="id_e" prefWidth="75.0" text="ID" />
+            <TableColumn fx:id="nom_e" prefWidth="156.0" text="Nom " />
+            <TableColumn fx:id="datedeb_e" prefWidth="174.0" text="Date début" />
+            <TableColumn fx:id="datefin_e" prefWidth="182.0" text="Date fin" />
+            <TableColumn fx:id="lieu_e" prefWidth="158.0" text="Lieu" />
+            <TableColumn fx:id="nbplaces_e" prefWidth="142.0" text="Nb places" />
+            <TableColumn fx:id="type_e" prefWidth="75.0" text="Type" />
+            <TableColumn fx:id="nbvues_e" prefWidth="87.0" text="Nb vues" />
+         </columns>
+      </TableView>
+      <Label fx:id="IDSPONSOR" layoutX="204.0" layoutY="116.0" prefHeight="40.0" prefWidth="127.0" text="ID" textFill="#867c7c">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </Label>
+      <Label fx:id="NOMSPONSOR" layoutX="391.0" layoutY="116.0" prefHeight="40.0" prefWidth="103.0" text="Nom" textFill="#808080">
+         <font>
+            <Font name="System Bold Italic" size="15.0" />
+         </font>
+      </Label>
+      <Label fx:id="TELSPONSOR" layoutX="581.0" layoutY="116.0" prefHeight="40.0" prefWidth="127.0" text="Tel " textFill="#7d7b80">
+         <font>
+            <Font name="System Bold Italic" size="15.0" />
+         </font>
+      </Label>
+      <Label fx:id="EMAILSPONSOR" layoutX="769.0" layoutY="116.0" prefHeight="40.0" prefWidth="110.0" text="Email" textFill="#7e7e80">
+         <font>
+            <Font name="System Bold Italic" size="15.0" />
+         </font>
+      </Label>
+      <Label fx:id="MONTANT" layoutX="962.0" layoutY="116.0" prefHeight="40.0" prefWidth="103.0" text="Montant" textFill="#7e7e80">
+         <font>
+            <Font name="System Bold Italic" size="15.0" />
+         </font>
+      </Label>
+      <Text fill="#a8a2a2" layoutX="453.0" layoutY="72.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Détail du sponsor" wrappingWidth="605.99365234375">
+         <font>
+            <Font name="Bookman Old Style" size="45.0" />
+         </font>
+      </Text>
+      <Button fx:id="quitter" layoutX="581.0" layoutY="603.0" mnemonicParsing="false" onAction="#retour" opacity="0.72" prefHeight="31.0" prefWidth="95.0" style="-fx-background-color: #5b3a96;" text="Retour" textFill="WHITE" />
+   </children>
+</AnchorPane>

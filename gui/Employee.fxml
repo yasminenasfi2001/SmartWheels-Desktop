@@ -1,0 +1,186 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="516.0" prefWidth="754.0" style="-fx-background-color: #EAE7FA;" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.EmployeeController">
+    <children>
+        <Label fx:id="label" layoutX="126" layoutY="120" minHeight="16" minWidth="69" />
+      <Pane layoutX="309.0" layoutY="264.0" prefHeight="250.0" prefWidth="384.0">
+         <children>
+            <TextField fx:id="nom" layoutX="10.0" layoutY="11.0" prefHeight="25.0" prefWidth="209.0" promptText="Nom" />
+            <TextField fx:id="type" layoutX="10.0" layoutY="63.0" prefHeight="25.0" prefWidth="209.0" promptText="Type" />
+            <TextField fx:id="prenom" layoutX="10.0" layoutY="37.0" prefHeight="25.0" prefWidth="209.0" promptText="Prenom" />
+            <TextField fx:id="idd" editable="false" layoutX="136.0" layoutY="39.0" visible="false" />
+            <Label layoutX="41.0" layoutY="39.0" text="id" visible="false" />
+            <TextField fx:id="email" layoutX="10.0" layoutY="91.0" prefHeight="25.0" prefWidth="209.0" promptText="Email" />
+            <ComboBox fx:id="dispo" layoutX="9.0" layoutY="119.0" prefHeight="30.0" prefWidth="209.0" />
+            <Button layoutX="-53.0" layoutY="190.0" mnemonicParsing="false" onAction="#ajouter" prefHeight="25.0" prefWidth="117.0" style="-fx-background-color: #6F5CC2;" text="AJouter" textFill="WHITE" />
+            <Button layoutX="73.0" layoutY="190.0" mnemonicParsing="false" onAction="#modifier" prefHeight="25.0" prefWidth="117.0" style="-fx-background-color: #6F5CC2;" text="Modifer" textFill="WHITE" />
+            <Button layoutX="201.0" layoutY="191.0" mnemonicParsing="false" onAction="#Supprimer" prefHeight="25.0" prefWidth="117.0" style="-fx-background-color: #6F5CC2;" text="Supprimer" textFill="WHITE" />
+         </children>
+      </Pane>
+      <TableView fx:id="affichage" layoutX="652.0" layoutY="187.0" prefHeight="244.0" prefWidth="464.0">
+         <columns>
+            <TableColumn fx:id="id" prefWidth="75.0" text="Identifiant" />
+            <TableColumn fx:id="t_nom" prefWidth="75.0" text="Nom" />
+            <TableColumn fx:id="t_prenom" prefWidth="88.79998779296875" text="Prenom" />
+            <TableColumn fx:id="t_type" prefWidth="71.20001220703125" text="Type" />
+            <TableColumn fx:id="t_email" prefWidth="71.20001220703125" text="email" />
+            <TableColumn fx:id="t_dispo" prefWidth="84.0" text="disponibilite" />
+         </columns>
+      </TableView>
+      <AnchorPane fx:id="anchor1" layoutY="1.0" prefHeight="72.0" prefWidth="1158.0" style="-fx-background-color: #52438F;">
+         <children>
+            <TextField layoutX="474.0" layoutY="20.0" prefHeight="25.0" prefWidth="234.0" />
+            <Label layoutX="368.0" layoutY="18.0" prefHeight="30.0" prefWidth="72.0" text="Search" textFill="#e1dddd">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Label>
+            <Label fx:id="l_prenom" layoutX="1047.0" layoutY="36.0" text="Prenom" textFill="WHITE">
+               <font>
+                  <Font size="19.0" />
+               </font>
+            </Label>
+            <Label fx:id="l_nom" layoutX="1059.0" layoutY="6.0" text="Nom" textFill="WHITE">
+               <font>
+                  <Font size="19.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+      <AnchorPane fx:id="anchor" layoutX="-1.0" layoutY="72.0" prefHeight="594.0" prefWidth="234.0" style="-fx-background-color: #6F5CC2;">
+         <children>
+            <Pane fx:id="left" layoutX="-12.0" layoutY="88.0" prefHeight="506.0" prefWidth="248.0" stylesheets="@../styles/dahsboard.css">
+               <children>
+                  <VBox fx:id="vboxid" layoutX="14.0" layoutY="-87.0" prefHeight="335.0" prefWidth="234.0">
+                     <children>
+                        <Button alignment="BASELINE_LEFT" mnemonicParsing="false" prefHeight="39.0" prefWidth="222.0" text="Front" textFill="WHITE">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                           <graphic>
+                              <ImageView fitHeight="27.0" fitWidth="21.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../images/lastversion/front.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                        </Button>
+                        <Button alignment="BASELINE_LEFT" mnemonicParsing="false" onAction="#Utilisateur" prefHeight="39.0" prefWidth="215.0" text="Gestion Utilisateur" textFill="WHITE">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                           <graphic>
+                              <ImageView fitHeight="24.0" fitWidth="23.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../images/lastversion/user.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                        </Button>
+                        <Button alignment="BASELINE_LEFT" mnemonicParsing="false" onAction="#Reservation" prefHeight="39.0" prefWidth="215.0" text="Gestion Rservation" textFill="WHITE">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                           <graphic>
+                              <ImageView fitHeight="30.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../images/lastversion/reservation.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                        </Button>
+                        <Button alignment="BASELINE_LEFT" mnemonicParsing="false" onAction="#Produits" prefHeight="39.0" prefWidth="222.0" text="Gestion Produits" textFill="WHITE">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                           <graphic>
+                              <ImageView fitHeight="27.0" fitWidth="21.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../images/lastversion/produit.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                        </Button>
+                        <Button alignment="BASELINE_LEFT" mnemonicParsing="false" onAction="#Vehicule" prefHeight="39.0" prefWidth="215.0" text="Gestion Vehicule" textFill="WHITE">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                           <graphic>
+                              <ImageView fitHeight="25.0" fitWidth="21.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../images/lastversion/vehicule.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                        </Button>
+                        <Button fx:id="Evenement" alignment="BASELINE_LEFT" mnemonicParsing="false" onAction="#Evenement" prefHeight="39.0" prefWidth="222.0" text="Gestion Evenement" textFill="WHITE">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                           <graphic>
+                              <ImageView fitHeight="24.0" fitWidth="28.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../images/lastversion/evenement.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                        </Button>
+                        <Button alignment="BASELINE_LEFT" mnemonicParsing="false" onAction="#Reparation" prefHeight="39.0" prefWidth="215.0" text="Gestion Reparation" textFill="WHITE">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                           <graphic>
+                              <ImageView fitHeight="31.0" fitWidth="23.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../images/lastversion/reparation.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                        </Button>
+                        <Button fx:id="id_rec" alignment="BASELINE_LEFT" mnemonicParsing="false" onAction="#Reclamation" prefHeight="39.0" prefWidth="228.0" text="Gestion Reclamation" textFill="WHITE">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                           <graphic>
+                              <ImageView fitHeight="23.0" fitWidth="23.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../images/lastversion/reclamation.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                        </Button>
+                        <Button alignment="BASELINE_LEFT" mnemonicParsing="false" onAction="#dexonnexion" prefHeight="39.0" prefWidth="222.0" text="Deconnexion" textFill="WHITE">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                           <graphic>
+                              <ImageView fitHeight="27.0" fitWidth="21.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../images/lastversion/deconnexion.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                        </Button>
+                     </children>
+                  </VBox>
+               </children>
+            </Pane>
+         </children>
+      </AnchorPane>
+      <Button fx:id="ajouter" layoutX="667.0" layoutY="451.0" mnemonicParsing="false" onAction="#mail" prefHeight="25.0" prefWidth="222.0" style="-fx-background-color: #6F5CC2;" text="Envoyer un mail à tous les employés" textFill="WHITE" />
+      <Button fx:id="btnNotif" layoutX="924.0" layoutY="451.0" mnemonicParsing="false" onAction="#btnNotif" prefHeight="23.0" prefWidth="160.0" style="-fx-background-color: #6F5CC2;" text="Notifier" textFill="WHITE" />
+    </children>
+</AnchorPane>

@@ -1,0 +1,188 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<VBox prefHeight="677.0" prefWidth="1110.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.Vehicule_Controller">
+   <children>
+      <AnchorPane fx:id="contentArea" prefHeight="100.0" prefWidth="1281.0" style="-fx-background-color: #52438F;">
+         <children>
+            <Pane fx:id="left" layoutX="-1.0" layoutY="88.0" prefHeight="593.0" prefWidth="266.0" style="-fx-background-color: #6F5CC2;" stylesheets="@../styles/dahsboard.css">
+               <children>
+                  <Button alignment="BASELINE_LEFT" layoutX="3.0" layoutY="22.0" mnemonicParsing="false" prefHeight="39.0" prefWidth="248.0" text="      Home" textFill="WHITE">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Button>
+                  <Button alignment="BASELINE_LEFT" layoutX="4.0" layoutY="101.0" mnemonicParsing="false" prefHeight="39.0" prefWidth="248.0" text="    Gestion des utilisateurs" textFill="WHITE">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="reservation" alignment="BASELINE_LEFT" layoutX="4.0" layoutY="169.0" mnemonicParsing="false" onAction="#reservation" prefHeight="39.0" prefWidth="248.0" text="   Gestion des réservations" textFill="WHITE">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Button>
+                  <Button alignment="BASELINE_LEFT" layoutX="5.0" layoutY="307.0" mnemonicParsing="false" prefHeight="39.0" prefWidth="238.0" text="    Gestion des Produits" textFill="WHITE">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Button>
+                  <Button alignment="BASELINE_LEFT" layoutX="4.0" layoutY="237.0" mnemonicParsing="false" prefHeight="39.0" prefWidth="238.0" text="    Gestion des véhicules" textFill="WHITE">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Button>
+                  <Button alignment="BASELINE_LEFT" layoutX="5.0" layoutY="443.0" mnemonicParsing="false" prefHeight="39.0" prefWidth="248.0" text="    Gestion des évenements" textFill="WHITE">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Button>
+                  <Button alignment="BASELINE_LEFT" layoutX="5.0" layoutY="373.0" mnemonicParsing="false" prefHeight="39.0" prefWidth="248.0" text="    Gestion des Réparations" textFill="WHITE">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Button>
+                  <ImageView fitHeight="39.0" fitWidth="36.0" layoutX="15.0" layoutY="24.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/home.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fitHeight="26.0" fitWidth="30.0" layoutX="20.0" layoutY="108.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/user.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fitHeight="26.0" fitWidth="36.0" layoutX="17.0" layoutY="176.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/agenda.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fitHeight="26.0" fitWidth="26.0" layoutX="17.0" layoutY="244.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/motorcycle-icon.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fitHeight="26.0" fitWidth="26.0" layoutX="17.0" layoutY="314.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/shop-icon.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fitHeight="26.0" fitWidth="26.0" layoutX="17.0" layoutY="380.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/Action-configure-icon.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fitHeight="26.0" fitWidth="26.0" layoutX="17.0" layoutY="450.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/Actions-view-calendar-upcoming-days-icon.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </Pane>
+            <TabPane layoutX="265.0" layoutY="88.0" prefHeight="593.0" prefWidth="1067.0" tabClosingPolicy="UNAVAILABLE">
+              <tabs>
+                <Tab>
+                  <content>
+                    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="293.0" prefWidth="711.0">
+                           <children>
+                              <AnchorPane layoutX="-20.0" layoutY="-18.0" prefHeight="714.0" prefWidth="1122.0" style="-fx-background-color: F3F0F0;">
+                                 <children>
+                                    <TextField fx:id="autoTextField" layoutX="245.0" layoutY="29.0" prefHeight="41.0" prefWidth="248.0" promptText="Chercher par marque..." style="-fx-border-color: #6F5CC2;" />
+                                    <Button fx:id="cherchee" layoutX="492.0" layoutY="29.0" mnemonicParsing="false" onAction="#cherchee" prefHeight="40.0" prefWidth="36.0" style="-fx-background-color: #6F5CC2;" textFill="WHITE">
+                                       <font>
+                                          <Font name="Gill Sans MT" size="15.0" />
+                                       </font>
+                                       <graphic>
+                                          <ImageView fitHeight="22.0" fitWidth="27.0" pickOnBounds="true" preserveRatio="true">
+                                             <image>
+                                                <Image url="@../images/search-icon%20(2).png" />
+                                             </image>
+                                          </ImageView>
+                                       </graphic>
+                                    </Button>
+                                    <TextField fx:id="charge_max" layoutX="40.0" layoutY="312.0" prefHeight="41.0" prefWidth="202.0" promptText="Charge maximale supportée" />
+                                    <TableView fx:id="tab" layoutX="245.0" layoutY="73.0" prefHeight="456.0" prefWidth="833.0" style="-fx-border-color: #6F5CC2;">
+                                       <columns>
+                                          <TableColumn fx:id="colid" prefWidth="59.0" text="ID" />
+                                          <TableColumn fx:id="colmarque" prefWidth="61.0" text="Marque" />
+                                          <TableColumn fx:id="colprix" prefWidth="75.0" text="prix" />
+                                          <TableColumn fx:id="colvitesse_max" minWidth="0.0" prefWidth="110.0" text="Vitesse_max" />
+                                          <TableColumn fx:id="colcharge_max" prefWidth="91.0" text="charge_max" />
+                                          <TableColumn fx:id="colauto_b" prefWidth="79.0" text="Auto_B" />
+                                          <TableColumn fx:id="colcouleur" prefWidth="89.0" text="Couleur" />
+                                          <TableColumn fx:id="coltype" prefWidth="160.0" text="Type" />
+                                       </columns>
+                                    </TableView>
+                                    <Button fx:id="ajouter" layoutX="675.0" layoutY="538.0" mnemonicParsing="false" onAction="#ajouter" prefHeight="30.0" prefWidth="123.0" style="-fx-background-color: #6F5CC2;" text="Ajouter" textFill="WHITE">
+                                       <graphic>
+                                          <ImageView fitHeight="27.0" fitWidth="29.0" pickOnBounds="true" preserveRatio="true">
+                                             <image>
+                                                <Image url="@../images/add.png" />
+                                             </image>
+                                          </ImageView>
+                                       </graphic></Button>
+                                    <TextField fx:id="couleur" layoutX="40.0" layoutY="430.0" prefHeight="41.0" prefWidth="202.0" promptText="Couleur" />
+                                    <Button fx:id="supprimer" layoutX="535.0" layoutY="538.0" mnemonicParsing="false" onAction="#supprimer" prefHeight="30.0" prefWidth="112.0" style="-fx-background-color: #6F5CC2;" text="Supprimer" textFill="WHITE">
+                                       <graphic>
+                                          <ImageView fitHeight="26.0" fitWidth="28.0" pickOnBounds="true" preserveRatio="true">
+                                             <image>
+                                                <Image url="@../images/delete.png" />
+                                             </image>
+                                          </ImageView>
+                                       </graphic></Button>
+                                    <ImageView fitHeight="150.0" fitWidth="33.0" layoutX="61.0" layoutY="515.0" pickOnBounds="true" preserveRatio="true" />
+                                    <ImageView fitHeight="26.0" fitWidth="26.0" layoutX="15.0" layoutY="435.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../images/Fatcow-Farm-Fresh-Select-by-color.32.png" />
+                                       </image>
+                                    </ImageView>
+                                    <TextField fx:id="id" layoutX="38.0" layoutY="72.0" prefHeight="41.0" prefWidth="202.0" promptText="Identifiant" />
+                                    <ComboBox fx:id="type" layoutX="37.0" layoutY="490.0" prefHeight="39.0" prefWidth="204.0" />
+                                    <Button fx:id="modifier" layoutX="408.0" layoutY="538.0" mnemonicParsing="false" onAction="#modifier" prefHeight="30.0" prefWidth="112.0" style="-fx-background-color: #6F5CC2;" text="Modifier" textFill="WHITE">
+                                       <graphic>
+                                          <ImageView fitHeight="26.0" fitWidth="26.0" pickOnBounds="true" preserveRatio="true">
+                                             <image>
+                                                <Image url="@../images/edit-validated-icon.png" />
+                                             </image>
+                                          </ImageView>
+                                       </graphic></Button>
+                                    <TextField fx:id="prix" layoutX="38.0" layoutY="187.0" prefHeight="41.0" prefWidth="202.0" promptText="Prix en TND" />
+                                    <ComboBox fx:id="marque" layoutX="38.0" layoutY="130.0" prefHeight="39.0" prefWidth="204.0" />
+                                    <ComboBox fx:id="vitesse_max" layoutX="38.0" layoutY="248.0" prefHeight="39.0" prefWidth="204.0" />
+                                    <ComboBox fx:id="auto_b" layoutX="37.0" layoutY="372.0" prefHeight="39.0" prefWidth="204.0" />
+                                 </children>
+                              </AnchorPane>
+                           </children>
+                        </AnchorPane>
+                  </content>
+                </Tab>
+              </tabs>
+            </TabPane>
+            <Text fill="WHITE" layoutX="43.0" layoutY="59.0" strokeType="OUTSIDE" strokeWidth="0.0" text="SMART WHEELS" wrappingWidth="156.0">
+               <font>
+                  <Font name="Bodoni MT Poster Compressed" size="31.0" />
+               </font>
+            </Text>
+            <ImageView fitHeight="36.0" fitWidth="92.0" layoutX="12.0" layoutY="31.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/wheel-icon.png" />
+               </image>
+            </ImageView>
+         </children>
+      </AnchorPane>
+   </children>
+</VBox>

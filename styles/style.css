@@ -1,0 +1,49 @@
+
+.d:hover{
+    -fx-border-color: #f88932;
+    -fx-border-width:  0px   0px  3px 0px;
+}
+
+
+
+
+
+
+
+
+.my-button{
+    
+    -fx-hgap: 20px;
+    -fx-padding: 10px;
+
+    -fx-background-color: #f88932;
+    -fx-background-radius: 50px;
+
+    -fx-border-radius: 50px;
+    -fx-border-width: 5px;
+    
+  -fx-font-size:14;
+  -fx-text-fill:#ffffff;
+    
+}
+.my-button:hover{
+    -fx-hgap: 20px;
+    -fx-padding: 10px;
+
+    -fx-background-color: #f88932;
+    -fx-background-radius: 50px;
+
+    -fx-border-radius: 50px;
+    -fx-border-width: 5px;
+    
+  -fx-font-size:15;
+  -fx-text-fill:#ffffff;
+    
+	
+}
+
+
+
+
+
+

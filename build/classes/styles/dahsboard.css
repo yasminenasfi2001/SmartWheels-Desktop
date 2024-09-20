@@ -1,0 +1,17 @@
+.button{
+    -fx-background-color:#6F5CC2;    
+    -fx-border-width:0px 0px 0px 10px ;
+    -fx-border-color: #ffffff;
+}
+.button:hover{
+   -fx-background-color:  #52438F;
+   -fx-border-width:0px 0px 0px 10px ;
+
+}
+.button:pressed{
+    -fx-background-color: #7156DD;
+}
+
+.table-row-cell {
+    -fx-min-height: 25px;
+}

@@ -1,0 +1,237 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<VBox prefHeight="677.0" prefWidth="1110.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.GestionDesReservationsController">
+   <children>
+      <AnchorPane fx:id="contentArea" prefHeight="100.0" prefWidth="1281.0" style="-fx-background-color: #52438F;">
+         <children>
+            <Pane fx:id="left" layoutX="-1.0" layoutY="88.0" prefHeight="593.0" prefWidth="266.0" style="-fx-background-color: #6F5CC2;" stylesheets="@../styles/dahsboard.css">
+               <children>
+                  <Button alignment="BASELINE_LEFT" layoutX="3.0" layoutY="22.0" mnemonicParsing="false" prefHeight="39.0" prefWidth="248.0" text="      Home" textFill="WHITE">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Button>
+                  <Button alignment="BASELINE_LEFT" layoutX="4.0" layoutY="101.0" mnemonicParsing="false" prefHeight="39.0" prefWidth="248.0" text="    Gestion des utilisateurs" textFill="WHITE">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Button>
+                  <Button alignment="BASELINE_LEFT" layoutX="4.0" layoutY="169.0" mnemonicParsing="false" prefHeight="39.0" prefWidth="248.0" text="   Gestion des réservations" textFill="WHITE">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Button>
+                  <Button alignment="BASELINE_LEFT" layoutX="5.0" layoutY="307.0" mnemonicParsing="false" prefHeight="39.0" prefWidth="238.0" text="    Gestion des Produits" textFill="WHITE">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="vehicule" alignment="BASELINE_LEFT" layoutX="4.0" layoutY="237.0" mnemonicParsing="false" onAction="#btn_vehicule" prefHeight="39.0" prefWidth="238.0" text="    Gestion des véhicules" textFill="WHITE">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Button>
+                  <Button alignment="BASELINE_LEFT" layoutX="5.0" layoutY="443.0" mnemonicParsing="false" prefHeight="39.0" prefWidth="248.0" text="    Gestion des évenements" textFill="WHITE">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Button>
+                  <Button alignment="BASELINE_LEFT" layoutX="5.0" layoutY="373.0" mnemonicParsing="false" prefHeight="39.0" prefWidth="248.0" text="    Gestion des Réparations" textFill="WHITE">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Button>
+                  <ImageView fitHeight="39.0" fitWidth="36.0" layoutX="15.0" layoutY="24.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/home.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fitHeight="26.0" fitWidth="30.0" layoutX="20.0" layoutY="108.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/user.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fitHeight="26.0" fitWidth="36.0" layoutX="17.0" layoutY="176.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/agenda.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fitHeight="26.0" fitWidth="26.0" layoutX="17.0" layoutY="244.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/motorcycle-icon.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fitHeight="26.0" fitWidth="26.0" layoutX="17.0" layoutY="314.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/shop-icon.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fitHeight="26.0" fitWidth="26.0" layoutX="17.0" layoutY="380.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/Action-configure-icon.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fitHeight="26.0" fitWidth="26.0" layoutX="17.0" layoutY="450.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/Actions-view-calendar-upcoming-days-icon.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </Pane>
+            <TabPane layoutX="265.0" layoutY="88.0" prefHeight="593.0" prefWidth="1067.0" tabClosingPolicy="UNAVAILABLE">
+              <tabs>
+                <Tab text="Gestion des Reservations">
+                  <content>
+                    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="293.0" prefWidth="711.0">
+                           <children>
+                              <AnchorPane layoutX="-20.0" layoutY="-18.0" prefHeight="714.0" prefWidth="1122.0" style="-fx-background-color: F3F0F0;">
+                                 <children>
+                                    <AnchorPane layoutX="371.0" layoutY="34.0" prefHeight="59.0" prefWidth="706.0" style="-fx-border-color: #52438F;">
+                                       <children>
+                                          <Button fx:id="refreshTableView" layoutX="404.0" layoutY="3.0" mnemonicParsing="false" onAction="#refreshTableView" prefHeight="46.0" prefWidth="111.0" style="-fx-background-color: F3F0F0;" textFill="WHITE">
+                                             <graphic>
+                                                <ImageView fitHeight="33.0" fitWidth="41.0" pickOnBounds="true" preserveRatio="true">
+                                                   <image>
+                                                      <Image url="@../images/reload-icon.png" />
+                                                   </image>
+                                                </ImageView>
+                                             </graphic>
+                                          </Button>
+                                          <Label layoutX="432.0" layoutY="40.0" text="Actualiser" textFill="#52438f">
+                                             <font>
+                                                <Font name="System Bold" size="12.0" />
+                                             </font>
+                                          </Label>
+                                          <ChoiceBox fx:id="choiceBoxMois" layoutX="14.0" layoutY="10.0" prefHeight="40.0" prefWidth="276.0" style="-fx-border-color: #6F5CC2;" />
+                                          <Button fx:id="recherche_Reservation" layoutX="289.0" layoutY="10.0" mnemonicParsing="false" onAction="#recherche_Reservation" prefHeight="40.0" prefWidth="36.0" style="-fx-background-color: #6F5CC2;" textFill="WHITE">
+                                             <font>
+                                                <Font name="Gill Sans MT" size="15.0" />
+                                             </font>
+                                             <graphic>
+                                                <ImageView fitHeight="22.0" fitWidth="27.0" pickOnBounds="true" preserveRatio="true">
+                                                   <image>
+                                                      <Image url="@../images/search-icon%20(2).png" />
+                                                   </image>
+                                                </ImageView>
+                                             </graphic>
+                                          </Button>
+                                       </children></AnchorPane>
+                                    <Button fx:id="supprimer_reservation" layoutX="561.0" layoutY="463.0" mnemonicParsing="false" onAction="#supprimer_reservation" prefHeight="30.0" prefWidth="112.0" style="-fx-background-color: #6F5CC2;" text="Supprimer" textFill="WHITE">
+                                       <graphic>
+                                          <ImageView fitHeight="26.0" fitWidth="28.0" pickOnBounds="true" preserveRatio="true">
+                                             <image>
+                                                <Image url="@../images/delete.png" />
+                                             </image>
+                                          </ImageView>
+                                       </graphic></Button>
+                                    <Button fx:id="modifier_reservation" layoutX="420.0" layoutY="462.0" mnemonicParsing="false" onAction="#modifier_reservation" prefHeight="30.0" prefWidth="112.0" style="-fx-background-color: #6F5CC2;" text="Modifier" textFill="WHITE">
+                                       <graphic>
+                                          <ImageView fitHeight="26.0" fitWidth="26.0" pickOnBounds="true" preserveRatio="true">
+                                             <image>
+                                                <Image url="@../images/edit-validated-icon.png" />
+                                             </image>
+                                          </ImageView>
+                                       </graphic></Button>
+                                    <Button fx:id="ajouter_reservation" layoutX="119.0" layoutY="389.0" mnemonicParsing="false" onAction="#ajouter_reservation" prefHeight="35.0" prefWidth="128.0" style="-fx-background-color: #6F5CC2;" text="Ajouter" textFill="WHITE">
+                                       <graphic>
+                                          <ImageView fitHeight="27.0" fitWidth="29.0" pickOnBounds="true" preserveRatio="true">
+                                             <image>
+                                                <Image url="@../images/add.png" />
+                                             </image>
+                                          </ImageView>
+                                       </graphic></Button>
+                                    <TableView fx:id="tab" layoutX="371.0" layoutY="105.0" prefHeight="319.0" prefWidth="709.0" style="-fx-border-color: #6F5CC2;">
+                                       <columns>
+                                          <TableColumn fx:id="colid_res" prefWidth="102.0" text="ID_Reservation" />
+                                          <TableColumn fx:id="coldd_r" prefWidth="92.0" text="date_debut" />
+                                          <TableColumn fx:id="coldf_r" prefWidth="141.0" text="date_fin" />
+                                          <TableColumn fx:id="colm" prefWidth="118.0" text="montant" />
+                                          <TableColumn fx:id="colid_v" prefWidth="125.0" text="id_vehicule" />
+                                          <TableColumn fx:id="colid_c" prefWidth="121.0" text="id_client" />
+                                       </columns>
+                                    </TableView>
+                                    <ImageView fitHeight="150.0" fitWidth="33.0" layoutX="61.0" layoutY="515.0" pickOnBounds="true" preserveRatio="true" />
+                                    <DatePicker fx:id="date_debut" layoutX="37.0" layoutY="250.0" prefHeight="41.0" prefWidth="323.0" />
+                                    <DatePicker fx:id="date_fin" layoutX="36.0" layoutY="310.0" prefHeight="41.0" prefWidth="324.0" />
+                                    <Button fx:id="statistique" layoutX="986.0" layoutY="36.0" mnemonicParsing="false" onAction="#statistique" prefHeight="52.0" prefWidth="90.0" style="-fx-background-color: F3F0F0;" textFill="WHITE">
+                                       <font>
+                                          <Font size="16.0" />
+                                       </font>
+                                       <graphic>
+                                          <ImageView fitHeight="37.0" fitWidth="41.0" pickOnBounds="true" preserveRatio="true">
+                                             <image>
+                                                <Image url="@../images/Misc-Stats-icon.png" />
+                                             </image>
+                                          </ImageView>
+                                       </graphic>
+                                    </Button>
+                                    <Button fx:id="impressionpdf" layoutX="887.0" layoutY="37.0" mnemonicParsing="false" onAction="#impressionpdf" prefHeight="46.0" prefWidth="111.0" style="-fx-background-color: F3F0F0;" textFill="WHITE">
+                                       <graphic>
+                                          <ImageView fitHeight="33.0" fitWidth="41.0" pickOnBounds="true" preserveRatio="true">
+                                             <image>
+                                                <Image url="@../images/Adobe-PDF-Document-icon.png" />
+                                             </image>
+                                          </ImageView>
+                                       </graphic>
+                                    </Button>
+                                    <Label layoutX="1008.0" layoutY="75.0" text="Statistique" textFill="#52438f">
+                                       <font>
+                                          <Font name="System Bold" size="12.0" />
+                                       </font>
+                                    </Label>
+                                    <Label layoutX="898.0" layoutY="75.0" text="Impression PDF" textFill="#52438f">
+                                       <font>
+                                          <Font name="System Bold" size="12.0" />
+                                       </font>
+                                    </Label>
+                                    <ComboBox fx:id="id_client" layoutX="36.0" layoutY="126.0" prefHeight="36.0" prefWidth="321.0" />
+                                    <ComboBox fx:id="id_veh" layoutX="36.0" layoutY="191.0" prefHeight="36.0" prefWidth="321.0" />
+                                 </children>
+                              </AnchorPane>
+                           </children>
+                        </AnchorPane>
+                  </content>
+                </Tab>
+              </tabs>
+            </TabPane>
+            <Text fill="WHITE" layoutX="43.0" layoutY="59.0" strokeType="OUTSIDE" strokeWidth="0.0" text="SMART WHEELS" wrappingWidth="156.0">
+               <font>
+                  <Font name="Bodoni MT Poster Compressed" size="31.0" />
+               </font>
+            </Text>
+            <ImageView fitHeight="36.0" fitWidth="92.0" layoutX="12.0" layoutY="31.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/wheel-icon.png" />
+               </image>
+            </ImageView>
+            <Button fx:id="front" layoutX="1156.0" layoutY="37.0" mnemonicParsing="false" onAction="#front" prefHeight="39.0" prefWidth="163.0" text="  Front Page" textFill="#6b415e">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Button>
+            <ImageView fitHeight="36.0" fitWidth="36.0" layoutX="1162.0" layoutY="39.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/shop-icon.png" />
+               </image>
+            </ImageView>
+         </children>
+      </AnchorPane>
+   </children>
+</VBox>
